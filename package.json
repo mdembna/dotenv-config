@@ -7,10 +7,10 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "eslint . && nyc --reporter=lcovonly mocha",
-    "lint": "eslint . --fix",
+    "test": "npm run lint && npm run mocha:cover",
+    "lint": "eslint .",
     "mocha": "mocha",
-    "mocha:cover": "nyc mocha"
+    "mocha:cover": "nyc --reporter=lcovonly mocha"
   },
   "repository": {
     "type": "git",
@@ -43,5 +43,11 @@
     "husky": "~2.7.0",
     "mocha": "~6.1.4",
     "nyc": "~14.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run mocha"
+    }
   }
 }

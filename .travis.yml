@@ -8,11 +8,13 @@ node_js:
 - '11'
 - '12'
 install:
-- npm install
-- npm install -g codecov
+  - npm install
+  - npm install -g codecov
 script:
-- nyc cover mocha --reporter lcovonly -- -R spec
-- codecov
+  - npm test
+  - nyc --reporter=lcovonly mocha
+after_success:
+  - codecov
 deploy:
   provider: npm
   email: public.szymanowski@gmail.com
