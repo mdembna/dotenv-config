@@ -6,6 +6,9 @@
   "directories": {
     "lib": "lib"
   },
+  "engines": {
+    "node": ">=7.0.0"
+  },
   "scripts": {
     "test": "npm run lint && npm run mocha:cover",
     "lint": "eslint .",
