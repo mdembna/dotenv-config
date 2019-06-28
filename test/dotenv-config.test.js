@@ -22,6 +22,6 @@ describe('dotenv-config.js', () => {
       return config({ envPath: 'not/existing/path', configPath: 'not/existing/path' });
     };
 
-    expect(x).to.throw('File doesn\'t exist: /Users/karolszymanowski/Documents/dotenv-config/not/existing/path');
+    expect(x).to.throw(`File doesn't exist: ${process.cwd()}/not/existing/path`);
   });
 });
