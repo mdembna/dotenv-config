@@ -9,6 +9,8 @@ Module that loads environment variables and verify their presence
 
 ## How to use it
 
+This module requires `config` file that look like this:
+
 **config.json**
 ```json
 {
@@ -25,11 +27,16 @@ Module that loads environment variables and verify their presence
 }
 ```
 
+and optionally `.env` file with saved environment variables:
+
 **.env**
 ```.env
 HOST=localhost
 PORT=4000
 ```
+
+---
+#### Usage:
 
 **index.js**
 ```javascript
@@ -40,14 +47,26 @@ console.log(config.test); // localhost
 module.exports = config;
 ```
 
-### Additional settings
+---
+## Additional settings
 
 ```javascript
 const config = require('dotenv-config');
 
 const settings = {
-  
+  envPath: '.env', // relative to project path
+  configPath: 'config.json' // relative to project path
 };
 
 config(settings);
+```
+
+### Setting default routes
+
+It is possible to change the default paths to `config` and `.env`
+by setting this environment variables:
+
+```..env
+DOTENV_CONFIG_ENVFILE=default/path/to/env/file
+DOTENV_CONFIG_CONFIGFILE=default/path/to/config/file
 ```
