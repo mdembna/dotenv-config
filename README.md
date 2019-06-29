@@ -1,9 +1,11 @@
 # dotenv-config
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![npm version](https://badge.fury.io/js/dotenv-config.svg)](https://www.npmjs.com/package/dotenv-config)
+![node](https://img.shields.io/node/v/dotenv-config.svg)
 [![Build Status](https://travis-ci.org/tetrash/dotenv-config.svg?branch=master)](https://travis-ci.org/tetrash/dotenv-config)
 [![codecov](https://codecov.io/gh/tetrash/dotenv-config/branch/master/graph/badge.svg)](https://codecov.io/gh/tetrash/dotenv-config)
-![node](https://img.shields.io/node/v/dotenv-config.svg)
+[![Code Style](https://badgen.net/badge/code%20style/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 Module that loads environment variables and verify their presence
 
