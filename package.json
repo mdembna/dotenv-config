@@ -1,6 +1,6 @@
 {
   "name": "dotenv-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Module that loads environment variables and verify their presence",
   "main": "lib/dotenv-config.js",
   "directories": {

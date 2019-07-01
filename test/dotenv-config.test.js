@@ -24,4 +24,12 @@ describe('dotenv-config.js', () => {
 
     expect(x).to.throw(`File doesn't exist: ${process.cwd()}/not/existing/path`);
   });
+
+  it('should ignore .env file if it doesn\'t exist', () => {
+    const x = function () {
+      return config({ envPath: 'not/existing/path', configPath: 'test/mocks/config-3.test.json' });
+    };
+
+    expect(x).not.to.throw();
+  });
 });
