@@ -1,10 +1,20 @@
 'use strict';
 
-const config = require('../lib/dotenv-config');
-
 describe('dotenv-config.js', () => {
   it('should return validated configs', () => {
     const conf = config({ envPath: 'test/mocks/.env-1.test', configPath: 'test/mocks/config-1.test.json' });
+
+    expect(conf).to.deep.equal({ test: 'localhost', port: '4000', default: 'default' });
+  });
+
+  it('should return validated configs from js file', () => {
+    const conf = config({ envPath: 'test/mocks/.env-1.test', configPath: 'test/mocks/config-1.js' });
+
+    expect(conf).to.deep.equal({ test: 'localhost', port: '4000', default: 'default' });
+  });
+
+  it('should return validated configs if variable have set both require and required flags set', () => {
+    const conf = config({ envPath: 'test/mocks/.env-1.test', configPath: 'test/mocks/config-2.js' });
 
     expect(conf).to.deep.equal({ test: 'localhost', port: '4000', default: 'default' });
   });

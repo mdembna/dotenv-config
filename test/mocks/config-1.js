@@ -1,0 +1,13 @@
+module.exports = {
+  test: {
+    require: true,
+    env: 'HOST',
+  },
+  port: 'PORT',
+  random: 'UNDEFINED_VAR',
+  default: {
+    require: true,
+    env: 'DEFAULT',
+    default: 'default',
+  },
+};

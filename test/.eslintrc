@@ -1,7 +1,6 @@
 {
   "extends": "../.eslintrc",
   "env": {
-    "es6": true,
     "node": true,
     "mocha": true
   },
@@ -10,6 +9,7 @@
     "config": false
   },
   "rules": {
-    "no-unused-expressions": 0
+    "no-unused-expressions": 0,
+    "strict": 0
   }
 }

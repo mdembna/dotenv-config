@@ -22,7 +22,7 @@ This module requires `config` file that look like this:
   },
   "port": "PORT",
   "default": {
-    "require": true,
+    "required": true,
     "env": "DEFAULT",
     "default": "default value"
   }
